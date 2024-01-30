@@ -9,8 +9,8 @@ CSS 中有一个用于实现边框的阴影的属性 box-shadow
 三个数值必须要保持一致，才能单边
 
 ```css
-**.shadow-only-bottom{ box-shadow: 0px 7px 7px -7px #5E5E5E;  }
-**.shadow-only-right{ box-shadow: 7px 0px 7px -7px #5E5E5E;  }
+.shadow-only-bottom{ box-shadow: 0px 7px 7px -7px #5E5E5E;  }
+.shadow-only-right{ box-shadow: 7px 0px 7px -7px #5E5E5E;  }
 .shadow-only-left{ box-shadow: -7px 0px 7px -7px #5E5E5E;  }
 .shadow-only-top{ box-shadow: 0px -7px 7px -7px #5E5E5E;  }
 ```

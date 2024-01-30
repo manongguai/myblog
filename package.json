@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "naive-ui": "^2.37.3",
     "vitepress": "1.0.0-rc.40"
   },
   "scripts": {

@@ -21,6 +21,9 @@ function onblur() {
 </script>
 
 <style scoped>
+input{
+    border: 1px solid #ccc;
+}
 p {
   font-style: italic;
   font-weight: bold;

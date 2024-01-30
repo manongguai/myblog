@@ -15,9 +15,11 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: '笔记', link: '/notes/html/tabindex' },
-      { text: '工具', link: '/tools' }
+      { text: '工具箱', link: '/tools' },
+      {
+        text: '联系作者',link: '/about',
+      },
     ],
-
     sidebar: [
       {
         text: 'HTML',
@@ -30,36 +32,46 @@ export default defineConfig({
         items: [
           { text: '三角形的制作', link: '/notes/css/triangle' },
           { text: '单边阴影', link: '/notes/css/shadow' },
+          { text: '放大镜效果', link: '/notes/css/magnifier' },
         ]
       },
       {
-        text: 'Vue',
+        text: 'Js',
         items: [
-          { text: 'HTML', link: '/html' },
+          { text: 'performance.now', link: '/notes/js/performance' },
         ]
       },
       {
-        text: 'React',
+        text: 'vue3源码解析',
         items: [
-          { text: 'HTML', link: '/html' },
+          { text: '01-准备工作', link: '/notes/vue/01' },
+          { text: '02-调试', link: '/notes/vue/02' },
+          { text: '03-createApp', link: '/notes/vue/03' },
+          { text: '04-mounted', link: '/notes/vue/04' },
+          { text: '05-createVNode', link: '/notes/vue/05' },
+          { text: '06-render', link: '/notes/vue/06' },
         ]
       },
+      // {
+      //   text: 'React',
+      //   items: [
+      //     { text: 'HTML', link: '/html' },
+      //   ]
+      // },
+      // {
+      //   text: 'Node',
+      //   items: [
+      //     { text: 'HTML', link: '/html' },
+      //   ]
+      // },
       {
-        text: 'Node',
+        text: 'SpringBoot学习笔记',
         items: [
-          { text: 'HTML', link: '/html' },
-        ]
-      },
-      {
-        text: 'Python',
-        items: [
-          { text: 'HTML', link: '/html' },
-        ]
-      },
-      {
-        text: 'Java',
-        items: [
-          { text: 'HTML', link: '/html' },
+          { text: '01-概述', link: '/notes/springboot/01' },
+          { text: '02-快速入门', link: '/notes/springboot/02' },
+          { text: '03-配置', link: '/notes/springboot/03' },
+          { text: '04-读取配置内容', link: '/notes/springboot/04' },
+          { text: '05-整合MyBatis', link: '/notes/springboot/05' },
         ]
       },
     ],
