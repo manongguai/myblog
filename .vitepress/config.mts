@@ -42,6 +42,7 @@ export default defineConfig({
           { text: 'html转pdf分页问题解决方案', link: '/notes/js/k-htmlpdf' },
           { text: 'vue2拖拽工具及拖拽辅助线', link: '/notes/js/k-vue-dragline' },
           { text: '写实现Promise', link: '/notes/js/promise' },
+          { text: 'webpack、rollup、vite、esbuild优劣势详解', link: '/notes/js/bundle' },
         ]
       },
       {
