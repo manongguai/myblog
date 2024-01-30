@@ -29,6 +29,7 @@ export default defineConfig({
         text: 'CSS',
         items: [
           { text: '三角形的制作', link: '/notes/css/triangle' },
+          { text: '单边阴影', link: '/notes/css/shadow' },
         ]
       },
       {
