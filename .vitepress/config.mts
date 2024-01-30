@@ -39,6 +39,8 @@ export default defineConfig({
         text: 'Js',
         items: [
           { text: 'performance.now', link: '/notes/js/performance' },
+          { text: 'html转pdf分页问题解决方案', link: '/notes/js/k-htmlpdf' },
+          { text: 'vue2拖拽工具及拖拽辅助线', link: '/notes/js/k-vue-dragline' },
         ]
       },
       {
