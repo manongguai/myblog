@@ -25,6 +25,7 @@ export default defineConfig({
         text: 'HTML',
         items: [
           { text: 'tabindex', link: '/notes/html/tabindex' },
+          { text: 'fragment', link: '/notes/html/fragment' },
         ]
       },
       {
@@ -33,6 +34,7 @@ export default defineConfig({
           { text: '三角形的制作', link: '/notes/css/triangle' },
           { text: '单边阴影', link: '/notes/css/shadow' },
           { text: '放大镜效果', link: '/notes/css/magnifier' },
+          { text: 'BEM规范', link: '/notes/css/bem' },
         ]
       },
       {
@@ -41,7 +43,7 @@ export default defineConfig({
           { text: 'performance.now', link: '/notes/js/performance' },
           { text: 'html转pdf分页问题解决方案', link: '/notes/js/k-htmlpdf' },
           { text: 'vue2拖拽工具及拖拽辅助线', link: '/notes/js/k-vue-dragline' },
-          { text: '写实现Promise', link: '/notes/js/promise' },
+          { text: '手写实现Promise', link: '/notes/js/promise' },
           { text: 'webpack、rollup、vite、esbuild优劣势详解', link: '/notes/js/bundle' },
         ]
       },
