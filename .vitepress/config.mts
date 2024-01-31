@@ -69,6 +69,10 @@ export default defineConfig({
             text: 'parcel',
             link: '/notes/advanced/parcel',
           },
+          {
+            text: 'ts 项目怎么在打包后生成d.ts文件',
+            link: '/notes/advanced/tscBuild',
+          },
         ]
       },
       
