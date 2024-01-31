@@ -31,7 +31,7 @@
 
 > tips:
 node version在8+ 才支持，否则将会出现以下报错
-![](../images/error.png)
+![](./images/error.png)
 
 ``` bash
 Yarn version:
