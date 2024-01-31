@@ -73,6 +73,10 @@ export default defineConfig({
             text: 'ts 项目怎么在打包后生成d.ts文件',
             link: '/notes/advanced/tscBuild',
           },
+          {
+            text: 'chrome扩展设置浏览器背景图',
+            link: '/notes/advanced/chrome',
+          },
         ]
       },
       
