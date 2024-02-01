@@ -79,6 +79,10 @@ export default defineConfig({
             text: 'chrome扩展设置浏览器背景图',
             link: '/notes/advanced/chrome',
           },
+          {
+            text: '使用github Action前端项目自动化部署到服务器上',
+            link: '/notes/advanced/githubAction',
+          },
         ]
       },
       
