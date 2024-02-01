@@ -1,4 +1,4 @@
-### 使用github Action前端项目自动化部署到服务器上
+### 使用github Action将前端项目自动化部署到服务器上
 
 <br>
 

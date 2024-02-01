@@ -80,7 +80,7 @@ export default defineConfig({
             link: '/notes/advanced/chrome',
           },
           {
-            text: '使用github Action前端项目自动化部署到服务器上',
+            text: '使用github Action将前端项目自动化部署到服务器上',
             link: '/notes/advanced/githubAction',
           },
         ]
