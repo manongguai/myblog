@@ -122,7 +122,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/manongguai/myblog' }
+      { icon: 'github', link: 'https://github.com/manongguai/react-vite-admin' }
     ]
   }
 })
