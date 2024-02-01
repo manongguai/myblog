@@ -3,7 +3,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Kirk的博客",
-  description: "A Front End Programmer ",
+  description: "学习用途，个人开发，用于学习前端，java，python.主要用于这些技术的相关笔记记录，测试和技术分享",
   markdown: {
     config(md) {
       md.use(containerPreview)
@@ -130,6 +130,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/manongguai/react-vite-admin' }
-    ]
+    ],
+    footer:{
+      message: '<a href="https://beian.miit.gov.cn/">豫ICP备2023009283号-1</a>',
+      copyright: 'Copyright © 2024-present Kirk Wang'
+    }
   }
 })
