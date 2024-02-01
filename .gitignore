@@ -16,8 +16,6 @@ lib
 es
 .vitepress/dist
 .vitepress/cache
-public
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
