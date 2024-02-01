@@ -119,6 +119,13 @@ export default defineConfig({
           { text: '05-整合MyBatis', link: '/notes/springboot/05' },
         ]
       },
+      {
+        text: '其他',
+        items: [{
+          text:'react-vite-admin通用后台管理系统',
+          link: '/other/react-vite-admin'
+        }]
+      }
     ],
 
     socialLinks: [
