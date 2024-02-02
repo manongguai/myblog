@@ -194,6 +194,14 @@ export default defineConfig({
             text: "使用github Action将前端项目自动化部署到服务器上",
             link: "/notes/advanced/githubAction",
           },
+          {
+            text: "PostCSS使用简介",
+            link: "/notes/advanced/postcss",
+          },
+          {
+            text: "使用 husky eslint commitlint 等工具统一项目规范",
+            link: "/notes/advanced/eslint",
+          },
         ],
       },
 
