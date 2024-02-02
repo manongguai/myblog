@@ -12,6 +12,7 @@
 | 零代码工具箱 |   前端零代码工具箱，代码生成器    |    [https://www.lingdaima.com/](https://www.lingdaima.com/) |
 | 互联网档案馆 |   互联网档案馆是一个非营利性图书馆，拥有数百万免费书籍、电影、软件、音乐、网站等。    |    [https://archive.org/](https://archive.org/) |
 | animate.css |   最流行的css动画库之一   |    [https://animate.style/](https://animate.style/) |
+| gasp |   强大的js动画库，涵盖了tween、timeline、easing等动画工具   |    [https://gsap.com/](https://gsap.com/) |
 | scrollReveal |   ScrollReveal是一个JavaScript库，可以在元素进入/离开视口时轻松地将其动画化    |    [https://scrollrevealjs.org/guide/hello-world.html](https://scrollrevealjs.org/guide/hello-world.html) |
 | 通信猫 |   mqtt通信在线调试    |    [https://www.tongxinmao.com/txm/webmqtt.php#collapseOnet](https://www.tongxinmao.com/txm/webmqtt.php#collapseOnet) |
 | haveibeenpwned |   检查你的email/password是否被泄露    |    [https://haveibeenpwned.com/](https://haveibeenpwned.com/) |
