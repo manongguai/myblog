@@ -1,4 +1,5 @@
 <template>
+  <!-- id,标识元素的唯一性，width,height 画布的宽高 -->
   <canvas id="c1" width="600" height="400">
     当前浏览器不支持canvas,请下载最新的浏览器
     <a href="https://www.google.cn/chrome/index.html">立即下载</a>
@@ -17,7 +18,7 @@ onMounted(() => {
   var ctx = c1.getContext("2d");
   // 3. 创建图案样式
   var img = new Image();
-  img.src = "../imgs/draw.jpg";
+  img.src = "/images/draw.jpg";
   img.onload = function () {
     // createPattern(图片对象,重复方式)
     /* 

@@ -40,7 +40,7 @@ onMounted(() => {
         */
   ctx.clip(heartPath); //把canvas俺路径裁剪为一个爱心区域，所有的内容只有爱心区域内的会显示
   var img = new Image();
-  img.src = "../imgs/draw.jpg";
+  img.src = "/images/draw.jpg";
   img.onload = function () {
     ctx.drawImage(img, 0, 0, 600, 400);
   };

@@ -3,6 +3,7 @@
     当前浏览器不支持canvas,请下载最新的浏览器
     <a href="https://www.google.cn/chrome/index.html">立即下载</a>
   </canvas>
+  <button id="btn">播放/暂停</button>
 </template>
 
 <script setup>
@@ -15,7 +16,10 @@ onMounted(() => {
   var ctx = c1.getContext("2d");
   // 1.获取图片
   var video = document.createElement("video");
-  video.src = "../imgs/video.mp4";
+  video.src = "/videos/video.mp4";
+  video.addEventListener("loadeddata", function (e) {
+    this.currentTime = 0; // 设置视频时间为0，显示第一帧
+  });
   var btn = document.querySelector("#btn");
   btn.addEventListener("click", function () {
     if (video.paused) {

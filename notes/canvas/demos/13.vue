@@ -15,7 +15,7 @@ onMounted(() => {
   var ctx = c1.getContext("2d");
   // 1.获取图片
   var img = new Image();
-  img.src = "../imgs/draw.jpg";
+  img.src = "/images/draw.jpg";
   img.onload = function () {
     // 2.绘制图片
     /* 

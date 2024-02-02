@@ -1,8 +1,11 @@
 <template>
-  <canvas id="c2" width="600" height="400">
-    当前浏览器不支持canvas,请下载最新的浏览器
-    <a href="https://www.google.cn/chrome/index.html">立即下载</a>
-  </canvas>
+  <div class="box">
+    <div id="ggk">谢谢惠顾</div>
+    <canvas id="c2" width="600" height="400">
+      当前浏览器不支持canvas,请下载最新的浏览器
+      <a href="https://www.google.cn/chrome/index.html">立即下载</a>
+    </canvas>
+  </div>
 </template>
 
 <script setup>
@@ -21,9 +24,10 @@ onMounted(() => {
   var isDraw = false;
   c1.onmousedown = function (e) {
     c1.onmousemove = function (e) {
+      console.log(e);
       isDraw = true;
-      var x = e.pageX;
-      var y = e.pageY;
+      var x = e.offsetX;
+      var y = e.offsetY;
       ctx.globalCompositeOperation = "destination-out";
       ctx.arc(x, y, 20, 0, 2 * Math.PI);
       ctx.fill();
@@ -35,7 +39,6 @@ onMounted(() => {
     c1.onmousemove = () => {};
   };
   var random = Math.random();
-  console.log(random);
   var ggk = document.querySelector("#ggk");
   if (random < 0.1) {
     ggk.innerHTML = "一等奖";
@@ -51,6 +54,9 @@ onMounted(() => {
 * {
   margin: 0;
   padding: 0;
+}
+.box{
+  position: relative;
 }
 
 #ggk {

@@ -8,25 +8,27 @@
 <script setup>
 import { onMounted } from "vue";
 onMounted(() => {
-  // 1、获取canvas画布
   var c1 = document.querySelector("#c1");
   if (!c1.getContext) {
-    console.log("当前浏览器不支持canvas,请下载最新的浏览器");
+      console.log('当前浏览器不支持canvas,请下载最新的浏览器');
   }
   // 2. 获取画笔，上下文对象
-  var ctx = c1.getContext("2d");
-
-  var heartPath = new Path2D();
-  heartPath.moveTo(300, 200);
-  //  ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3)
-  heartPath.bezierCurveTo(350, 150, 400, 200, 300, 280);
-
-  heartPath.bezierCurveTo(200, 200, 250, 150, 300, 200);
-
-  ctx.stroke(heartPath);
-  // 创建一条折线
-  var polyline = new Path2D("M10 10 h80 v80 h -80 z");
-  ctx.stroke(polyline);
+  var ctx = c1.getContext('2d')
+  // 3. 创建图案样式
+  var img = new Image();
+  img.src = '../imgs/draw.jpg'
+  img.onload = function () {
+      // createPattern(图片对象,重复方式)
+      /* 
+      repeat	默认。该模式在水平和垂直方向重复。
+      repeat-x	该模式只在水平方向重复。
+      repeat-y	该模式只在垂直方向重复。
+      no-repeat	该模式只显示一次（不重复）。
+      */
+      let pattern = ctx.createPattern(img, 'repeat')
+      ctx.fillStyle = pattern
+      ctx.fillRect(0, 0, c1.width, c1.height)
+  }
 });
 </script>
 
