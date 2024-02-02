@@ -2,7 +2,7 @@
 
 
 | 名称        |      介绍      |  链接 |
-| ------------- | :-----------: | ----: |
+| ------------- | :-----------: | :---- |
 | pdf转换器      | pdf转换工具 | http://www.pdfdo.com/pdf-to-image.aspx |
 | quicktype      |   ts等快速类型工具   |   [https://app.quicktype.io/](https://app.quicktype.io/) |
 | jpom |   国内运维自动化平台    |    [https://jpom.top/pages/2e4ffc/](https://jpom.top/pages/2e4ffc/) |
