@@ -3,6 +3,7 @@
     当前浏览器不支持canvas,请下载最新的浏览器
     <a href="https://www.google.cn/chrome/index.html">立即下载</a>
   </canvas>
+  <button id="restoreBtn">撤销</button>
 </template>
 
 <script setup>
