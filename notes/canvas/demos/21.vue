@@ -1,0 +1,97 @@
+<template>
+  <canvas id="c1" width="600" height="400">
+    当前浏览器不支持canvas,请下载最新的浏览器
+    <a href="https://www.google.cn/chrome/index.html">立即下载</a>
+  </canvas>
+</template>
+
+<script setup>
+import { onMounted } from "vue";
+onMounted(() => {
+  // 1、获取canvas画布
+  var c1 = document.querySelector("#c1");
+  if (!c1.getContext) {
+    console.log("当前浏览器不支持canvas,请下载最新的浏览器");
+  }
+  // 2. 获取画笔，上下文对象
+  var ctx = c1.getContext("2d");
+  var heartPath = new Path2D();
+  heartPath.moveTo(300, 200);
+  //  ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3)
+  heartPath.bezierCurveTo(350, 150, 400, 200, 300, 280);
+  heartPath.bezierCurveTo(200, 200, 250, 150, 300, 200);
+  ctx.stroke(heartPath);
+  class Heart {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.heartPath = new Path2D();
+      this.heartPath.moveTo(this.x, this.y);
+      //  ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3)
+      this.heartPath.bezierCurveTo(
+        this.x + 50,
+        this.y - 50,
+        this.x + 100,
+        this.y,
+        this.x,
+        this.y + 80
+      );
+      this.heartPath.bezierCurveTo(
+        this.x - 100,
+        this.y,
+        this.x - 50,
+        this.y - 50,
+        this.x,
+        this.y
+      );
+
+      this.color = "red";
+      this.isIn = false;
+      this.eventsMap = {
+        hover: [],
+        leave: [],
+      };
+      c1.onmousemove = (e) => {
+        let x1 = e.offsetX;
+        let y1 = e.offsetY;
+        // 判断点是否在路径内
+        this.isIn = ctx.isPointInPath(this.heartPath, x1, y1);
+        console.log(this.isIn);
+        this.eventsMap[this.isIn ? "hover" : "leave"].forEach((fn) => {
+          fn();
+        });
+      };
+    }
+    onHover(fn) {
+      this.eventsMap.hover.push(fn);
+    }
+    onLeave(fn) {
+      this.eventsMap.leave.push(fn);
+    }
+    draw() {
+      ctx.save();
+      ctx.fillStyle = this.color;
+      ctx.fill(this.heartPath);
+      ctx.restore();
+    }
+  }
+  var heart = new Heart(100, 100);
+  heart.onHover(() => {
+    heart.color = "blue";
+    heart.draw();
+  });
+  heart.onLeave(() => {
+    heart.color = "red";
+    heart.draw();
+  });
+  function render() {
+    ctx.clearRect(0, 0, c1.width, c1.height);
+    heart.draw();
+    ctx.fill(heartPath);
+    requestAnimationFrame(render);
+  }
+  render();
+});
+</script>
+
+<style scoped></style>

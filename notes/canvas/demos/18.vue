@@ -1,0 +1,50 @@
+<template>
+  <canvas id="c1" width="600" height="400">
+    当前浏览器不支持canvas,请下载最新的浏览器
+    <a href="https://www.google.cn/chrome/index.html">立即下载</a>
+  </canvas>
+</template>
+
+<script setup>
+import { onMounted } from "vue";
+onMounted(() => {
+  // 1、获取canvas画布
+  var c1 = document.querySelector("#c1");
+  if (!c1.getContext) {
+    console.log("当前浏览器不支持canvas,请下载最新的浏览器");
+  }
+  // 2. 获取画笔，上下文对象
+  var ctx = c1.getContext("2d");
+  var heartPath = new Path2D();
+  heartPath.moveTo(300, 200);
+  //  ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3)
+  heartPath.bezierCurveTo(350, 150, 400, 200, 300, 280);
+  heartPath.bezierCurveTo(200, 200, 250, 150, 300, 200);
+
+  /* 
+        
+        CanvasRenderingContext2D.clip() 是 Canvas 2D API 将当前创建的路径设置为当前剪切路径的方法。
+        语法
+        void ctx.clip();
+        void ctx.clip(fillRule);
+        void ctx.clip(path, fillRule);
+        参数
+        fillRule
+        这个算法判断一个点是在路径内还是在路径外。 允许的值：
+        nonzero
+        非零环绕原则，默认的原则。
+        evenodd
+        奇偶环绕原则。
+        path
+        需要剪切的 Path2D 路径。
+        */
+  ctx.clip(heartPath); //把canvas俺路径裁剪为一个爱心区域，所有的内容只有爱心区域内的会显示
+  var img = new Image();
+  img.src = "../imgs/draw.jpg";
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0, 600, 400);
+  };
+});
+</script>
+
+<style scoped></style>

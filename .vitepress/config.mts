@@ -58,6 +58,104 @@ export default defineConfig({
         ],
       },
       {
+        text: "canvas",
+        items: [
+          {
+            text: "01.体验canvas",
+            link: "/notes/canvas/01",
+          },
+          {
+            text: "02.绘制基本图形",
+            link: "/notes/canvas/02",
+          },
+          {
+            text: "03.绘制圆形arc",
+            link: "/notes/canvas/03",
+          },
+          {
+            text: "04.绘制折线段lineTo",
+            link: "/notes/canvas/04",
+          },
+          {
+            text: "05.绘制圆弧arcTo",
+            link: "/notes/canvas/05",
+          },
+          {
+            text: "06.贝塞尔曲线",
+            link: "/notes/canvas/06",
+          },
+          {
+            text: "07.封装路径path2D",
+            link: "/notes/canvas/07",
+          },
+          {
+            text: "08.颜色设置",
+            link: "/notes/canvas/08",
+          },
+          {
+            text: "09.线性渐变和径向渐变",
+            link: "/notes/canvas/09",
+          },
+          {
+            text: "10.pattern模式",
+            link: "/notes/canvas/10",
+          },
+          {
+            text: "11.线条样式",
+            link: "/notes/canvas/11",
+          },
+          {
+            text: "12.阴影设置",
+            link: "/notes/canvas/12",
+          },
+          {
+            text: "13.绘制图片",
+            link: "/notes/canvas/13",
+          },
+          {
+            text: "14.绘制视频",
+            link: "/notes/canvas/14",
+          },
+          {
+            text: "15.文字绘制",
+            link: "/notes/canvas/15",
+          },
+          {
+            text: "16.位移变换",
+            link: "/notes/canvas/16",
+          },
+          {
+            text: "17.合成图层",
+            link: "/notes/canvas/17",
+          },
+          {
+            text: "18.裁剪",
+            link: "/notes/canvas/18",
+          },
+          {
+            text: "19.状态保存和恢复",
+            link: "/notes/canvas/19",
+          },
+          {
+            text: "20.像素操作",
+            link: "/notes/canvas/20",
+          },
+          {
+            text: "21.封装绘制的物体",
+            link: "/notes/canvas/21",
+          },
+          {
+            text: "22.签名画板案例",
+            link: "/notes/canvas/22",
+          },
+          {
+            text: "23.时钟案例",
+            link: "/notes/canvas/23",
+          },
+          
+        ],
+      },
+      {
         text: "前端进阶",
         items: [
           {

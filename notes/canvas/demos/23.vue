@@ -1,0 +1,107 @@
+<template>
+  <canvas id="c1" width="600" height="400">
+    当前浏览器不支持canvas,请下载最新的浏览器
+    <a href="https://www.google.cn/chrome/index.html">立即下载</a>
+  </canvas>
+</template>
+
+<script setup>
+import { onMounted } from "vue";
+onMounted(() => {
+  // 1、获取canvas画布
+  var c1 = document.querySelector("#c1");
+  if (!c1.getContext) {
+    console.log("当前浏览器不支持canvas,请下载最新的浏览器");
+  }
+  // 2. 获取画笔，上下文对象
+  var ctx = c1.getContext("2d");
+  function render() {
+    ctx.clearRect(0, 0, c1.width, c1.height);
+    //保存当前上下文状态
+    ctx.save();
+    ctx.translate(280, 200)
+    ctx.rotate(-Math.PI / 2);
+    // 保存圆心位置，并且x轴指向零点方向
+    ctx.save();
+    // 12小时
+    for (var i = 0; i < 12; i++) {
+      ctx.beginPath();
+      ctx.lineWidth = 8;
+      ctx.moveTo(170, 0);
+      ctx.lineTo(190, 0);
+      ctx.strokeStyle = "gray";
+      ctx.stroke();
+      ctx.closePath();
+      ctx.rotate((2 * Math.PI) / 12);
+    }
+    // 回到零点方向
+    ctx.restore();
+    ctx.save();
+    // 60秒
+    for (var i = 0; i < 60; i++) {
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.moveTo(180, 0);
+      ctx.lineTo(190, 0);
+      ctx.strokeStyle = "gray";
+      ctx.stroke();
+      ctx.closePath();
+      ctx.rotate((2 * Math.PI) / 60);
+    }
+    ctx.restore();
+    ctx.save();
+
+    var time = new Date();
+    var hour = time.getHours();
+    hour = hour >= 12 ? hour - 12 : hour; // 12小时制
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
+
+    // 绘制秒针
+    ctx.beginPath();
+    ctx.rotate(((2 * Math.PI) / 60) * seconds);
+    ctx.lineWidth = 2;
+    ctx.moveTo(-30, 0);
+    ctx.lineTo(190, 0);
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+    ctx.save();
+
+    // 绘制分针
+    ctx.beginPath();
+    ctx.rotate(
+      ((2 * Math.PI) / 60) * minutes + ((2 * Math.PI) / 60 / 60) * seconds
+    );
+    ctx.lineWidth = 4;
+    ctx.moveTo(-20, 0);
+    ctx.lineTo(130, 0);
+    ctx.strokeStyle = "#888";
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+    ctx.save();
+
+    // 绘制时针
+    ctx.beginPath();
+    ctx.rotate(
+      ((2 * Math.PI) / 12) * hour +
+        ((2 * Math.PI) / 12 / 60) * minutes +
+        ((2 * Math.PI) / 12 / 60 / 60) * seconds
+    );
+    ctx.lineWidth = 6;
+    ctx.moveTo(-10, 0);
+    ctx.lineTo(80, 0);
+    ctx.strokeStyle = "#333";
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+    ctx.restore();
+    requestAnimationFrame(render);
+  }
+  render();
+});
+</script>
+
+<style scoped></style>
