@@ -202,6 +202,10 @@ export default defineConfig({
             text: "使用 husky eslint commitlint 等工具统一项目规范",
             link: "/notes/advanced/eslint",
           },
+          {
+            text: "virtual-module，一个被低估的模块模式",
+            link: "/notes/advanced/virtualModule",
+          },
         ],
       },
 
