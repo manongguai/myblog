@@ -5,7 +5,7 @@ import {
 } from "@vitepress-demo-preview/plugin";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Kirk的博客",
+  title: "web技术学习笔记和分享",
   description:
     "学习用途，个人开发，用于学习前端，java，python.主要用于这些技术的相关笔记记录，测试和技术分享",
   head: [["link", { rel: "icon", href: "/favicon.ico",type:"image/x-icon" }]],
